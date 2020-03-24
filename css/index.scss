@@ -2,7 +2,7 @@ $primary_color: #797979;
 body{
     margin: 0;
     padding: 0;
-    background-image: url("../img/elephants-1.jpg");
+    background-image: url("../img/lion.jpg");
     background-color: #0000007c;
     background-attachment: fixed;
     background-size: cover;
@@ -10,6 +10,8 @@ body{
     header {
         position: sticky;
         top: 0;
+        height: 10vh;
+        z-index: 3;
         nav {
             display: flex;
             justify-content: space-between;
@@ -84,11 +86,12 @@ body{
     }
 
     .side-intro {
-        height: 94vh;
+        height: 90vh;
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        position: relative;
 
         .hello-message {
             color: white;
@@ -97,15 +100,41 @@ body{
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            width: 30%;
+            position: absolute;
+            top: 4rem;
             h1 {
-                font-family: 'Abril Fatface';
                 font-weight: normal;
-                font-size: 2.4rem;
+                font-size: 3rem;
+                font-family: 'Abril Fatface';
+                margin: 0.2rem 0;
             }
 
             p {
-
+                width: 60%;
+                text-align: center;
+                font-family: 'Abril Fatface';
+                font-size: 1.5em;
+                margin: 0.2rem 0;
             }
         }
+
+        .description {
+            position: absolute;
+            bottom: 0;
+            color: white;
+            width: 20%;
+            left: 0.5em;
+
+            p {
+                font-size: 0.9em;
+            }
+        }
+        
+    }
+
+    .second-page {
+        height: 90vh;
+        background-color: white;
     }
 }

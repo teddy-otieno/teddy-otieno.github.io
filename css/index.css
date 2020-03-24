@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("../img/elephants-1.jpg");
+  background-image: url("../img/lion.jpg");
   background-color: #0000007c;
   background-attachment: fixed;
   background-size: cover;
@@ -12,6 +12,8 @@ body header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  height: 10vh;
+  z-index: 3;
 }
 
 body header nav {
@@ -106,7 +108,7 @@ body header nav .profile-photo img {
 }
 
 body .side-intro {
-  height: 94vh;
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,6 +122,7 @@ body .side-intro {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 body .side-intro .hello-message {
@@ -138,11 +141,40 @@ body .side-intro .hello-message {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 30%;
+  position: absolute;
+  top: 4rem;
 }
 
 body .side-intro .hello-message h1 {
-  font-family: 'Abril Fatface';
   font-weight: normal;
-  font-size: 2.4rem;
+  font-size: 3rem;
+  font-family: 'Abril Fatface';
+  margin: 0.2rem 0;
+}
+
+body .side-intro .hello-message p {
+  width: 60%;
+  text-align: center;
+  font-family: 'Abril Fatface';
+  font-size: 1.5em;
+  margin: 0.2rem 0;
+}
+
+body .side-intro .description {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  width: 20%;
+  left: 0.5em;
+}
+
+body .side-intro .description p {
+  font-size: 0.9em;
+}
+
+body .second-page {
+  height: 90vh;
+  background-color: white;
 }
 /*# sourceMappingURL=index.css.map */
