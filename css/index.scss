@@ -3,10 +3,8 @@ body{
     margin: 0;
     padding: 0;
     background-image: url("../img/lion.jpg");
-    background-color: #0000007c;
     background-attachment: fixed;
     background-size: cover;
-    background-blend-mode: darken;
     header {
         position: sticky;
         top: 0;
@@ -124,10 +122,30 @@ body{
             bottom: 0;
             color: white;
             width: 20%;
-            left: 0.5em;
+            left: 0.5rem;
 
             p {
                 font-size: 0.9em;
+            }
+        }
+
+        .social-media {
+            position: absolute;
+            bottom: 0;
+            right: 0.5rem;
+            color: white;
+            display: flex;
+            
+            span {
+                height: 20pt;
+                width: 20pt;
+                display: flex;
+                padding: 0.4rem;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    fill: currentColor;
+                }
             }
         }
         
