@@ -23,6 +23,7 @@ body {
   background-blend-mode: multiply;
   background-attachment: fixed;
   background-size: cover;
+  font-family: "Work Sans", sans-serif;
 }
 body header {
   position: sticky;
@@ -103,6 +104,8 @@ body .page {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 10vh;
+  box-sizing: border-box;
 }
 body .page .scroll-down-button {
   position: absolute;
@@ -140,6 +143,8 @@ body .side-intro .profile-photo {
   background-color: white;
   border-radius: 50%;
   box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
 }
 body .side-intro .profile-photo img {
   height: 120pt;
@@ -192,7 +197,7 @@ body .side-intro .description {
   position: absolute;
   bottom: 1em;
   color: white;
-  width: 20%;
+  width: 30%;
   left: 0.5rem;
 }
 body .side-intro .description p {
@@ -218,4 +223,51 @@ body .side-intro .social-media span img {
 }
 body .following {
   background-color: black;
+}
+body .resume {
+  color: white;
+  background-color: #171717;
+}
+body .resume h1 {
+  margin-bottom: 32pt;
+}
+body .resume .skills {
+  display: flex;
+  width: 80%;
+}
+body .resume .skills .tools, body .resume .skills .stacks {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .resume .skills .tools ul, body .resume .skills .stacks ul {
+  padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  body .navigation {
+    display: none;
+  }
+  body .side-intro .hello-message {
+    width: 100%;
+  }
+  body .side-intro .description {
+    width: 100%;
+    bottom: 60pt;
+    padding: 0 8pt;
+  }
+}
+@media only screen and (max-width: 420px) {
+  body .navigation {
+    display: none;
+  }
+  body .side-intro .hello-message {
+    width: 100%;
+  }
+  body .side-intro .description {
+    width: 100%;
+    bottom: 60pt;
+    padding: 0 8pt;
+  }
 }

@@ -26,6 +26,8 @@ body {
   background-blend-mode: multiply;
   background-attachment: fixed;
   background-size: cover;
+  font-family: 'Work Sans', sans-serif;
+
   // overflow: hidden;
 
   header {
@@ -124,6 +126,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 10vh;
+    box-sizing: border-box;
 
     .scroll-down-button {
       position: absolute;
@@ -166,6 +170,9 @@ body {
       background-color: white;
       border-radius: 50%;
       box-sizing: border-box;
+      justify-content: center;
+      align-items: center;
+
       img {
         height: 120pt;
         width: 120pt;
@@ -227,7 +234,7 @@ body {
       position: absolute;
       bottom: 1em;
       color: white;
-      width: 20%;
+      width: 30%;
       left: 0.5rem;
 
       p {
@@ -260,5 +267,70 @@ body {
 
   .following {
     background-color: black;
+  }
+
+  .resume {
+    color: white;
+    background-color: #171717;
+
+    h1 {
+      margin-bottom: 32pt;
+    }
+    .skills {
+      display: flex;
+      width: 80%;
+
+      .tools, .stacks {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        ul {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {
+
+    .navigation {
+      display: none;
+    }
+    .side-intro {
+      .hello-message {
+        width: 100%;
+      }
+
+      .description {
+        width: 100%;
+        bottom: 60pt;
+        padding: 0 8pt;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+
+  body {
+
+    .navigation {
+      display: none;
+    }
+    .side-intro {
+      .hello-message {
+        width: 100%;
+      }
+
+      .description {
+        width: 100%;
+        bottom: 60pt;
+        padding: 0 8pt;
+      }
+    }
   }
 }
