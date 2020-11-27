@@ -15,6 +15,10 @@
   background-color: #797979;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -24,9 +28,10 @@ body {
   background-attachment: fixed;
   background-size: cover;
   font-family: "Work Sans", sans-serif;
+  scroll-snap-type: y mandatory;
 }
 body header {
-  position: sticky;
+  position: fixed;
   top: 0;
   height: 10vh;
   z-index: 3;
@@ -106,6 +111,7 @@ body .page {
   align-items: center;
   padding-top: 10vh;
   box-sizing: border-box;
+  scroll-snap-align: start;
 }
 body .page .scroll-down-button {
   position: absolute;
@@ -128,7 +134,7 @@ body .page .scroll-down-button img {
   }
 }
 body .side-intro {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -251,6 +257,20 @@ body .resume .skills .tools ul, body .resume .skills .stacks ul {
   }
   body .side-intro .hello-message {
     width: 100%;
+    margin-top: 32pt;
+  }
+  body .side-intro .hello-message .profile-photo img {
+    width: 100pt;
+    height: 100pt;
+  }
+  body .side-intro .hello-message h1 {
+    font-size: 1.6em;
+  }
+  body .side-intro .hello-message p {
+    font-size: 1.2em;
+  }
+  body .side-intro .hello-message .to-contacts {
+    margin: 10pt 0;
   }
   body .side-intro .description {
     width: 100%;
@@ -264,10 +284,5 @@ body .resume .skills .tools ul, body .resume .skills .stacks ul {
   }
   body .side-intro .hello-message {
     width: 100%;
-  }
-  body .side-intro .description {
-    width: 100%;
-    bottom: 60pt;
-    padding: 0 8pt;
   }
 }

@@ -18,6 +18,10 @@ $primary_color: #797979;
   background-color: $primary_color;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -27,11 +31,11 @@ body {
   background-attachment: fixed;
   background-size: cover;
   font-family: 'Work Sans', sans-serif;
-
+  scroll-snap-type: y mandatory;
   // overflow: hidden;
 
   header {
-    position: sticky;
+    position: fixed;
     top: 0;
     height: 10vh;
     z-index: 3;
@@ -128,6 +132,7 @@ body {
     align-items: center;
     padding-top: 10vh;
     box-sizing: border-box;
+    scroll-snap-align: start;
 
     .scroll-down-button {
       position: absolute;
@@ -155,7 +160,7 @@ body {
   }
 
   .side-intro {
-    height: 90vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -303,6 +308,26 @@ body {
     .side-intro {
       .hello-message {
         width: 100%;
+        margin-top: 32pt;
+        .profile-photo {
+          
+          img {
+            width: 100pt;
+            height: 100pt;
+          }
+        }
+
+        h1 {
+          font-size: 1.6em;
+        }
+
+        p {
+          font-size: 1.2em;
+        }
+
+        .to-contacts {
+          margin: 10pt 0;
+        }
       }
 
       .description {
@@ -327,9 +352,6 @@ body {
       }
 
       .description {
-        width: 100%;
-        bottom: 60pt;
-        padding: 0 8pt;
       }
     }
   }
