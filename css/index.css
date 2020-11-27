@@ -228,7 +228,33 @@ body .side-intro .social-media span img {
   fill: currentColor;
 }
 body .following {
-  background-color: black;
+  background-color: #171717;
+  padding-left: 64pt;
+  color: white;
+  border-top: 1pt solid grey;
+}
+body .following .projects {
+  margin-top: 16pt;
+  padding: 0 4pt;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 4pt;
+}
+body .following .projects .project {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+body .following .projects .project img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4pt;
+}
+body .following .projects .project p {
+  text-align: center;
+}
+body .following .projects .project a {
+  color: white;
 }
 body .resume {
   color: white;
@@ -282,7 +308,18 @@ body .resume .skills .tools ul, body .resume .skills .stacks ul {
   body .navigation {
     display: none;
   }
+  body .page {
+    box-sizing: border-box;
+  }
   body .side-intro .hello-message {
     width: 100%;
+  }
+  body .following {
+    padding-left: 0;
+  }
+  body .following .projects {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16pt;
   }
 }
