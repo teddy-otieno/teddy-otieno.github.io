@@ -1,6 +1,9 @@
 $primary_color: #797979;
 $background_color: #171717;
 
+a {
+  color: white;
+}
 * {
   scrollbar-width: thin;
   scrollbar-color: $primary_color  black;
@@ -33,10 +36,11 @@ body {
   // overflow: hidden;
 
   header {
-    position: fixed;
+    position: sticky;
     top: 0;
-    height: 10vh;
+    width: 100%;
     z-index: 3;
+    background-color: $background_color;
 
     nav {
       display: flex;
@@ -271,12 +275,20 @@ body {
 
   .following {
     background-color: $background_color;
-    padding-left: 64pt;
     color: white;
     border-top: 1pt solid grey;
+
+    .about-description {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+    }
+
+
+
     .projects {
       margin-top: 16pt;
-      padding: 0 4pt;
+      padding: 0 32pt;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 4pt;
@@ -393,7 +405,13 @@ body {
     }
     
       .following {
-        padding-left: 0;;
+        padding-left: 0;
+
+      .about-description {
+        width: 90%;
+      }
+
+
         .projects {
     
           display: flex;
