@@ -81,3 +81,40 @@ function initalize() {
 initalize();
 scroll_down();
 on_scroll_header_style();
+
+// var last_scroll_position = 0;
+// var previous_window_height = 0;
+// var is_window_scrolling = false;
+
+// window.onscroll = function() {
+    
+//     console.log(`is window scrolling = ${is_window_scrolling}`);
+//     console.log(`${last_scroll_position} - ${window.scrollY}`);
+
+//     if(window.scrollY > last_scroll_position && !is_window_scrolling) {
+//         console.log("Window is scrolling");
+//         previous_window_height = window.innerHeight;
+
+//         let scroll_offset = (window.pageYOffset || document.documentElement.scrollTop).toFixed();
+//         let target = (scroll_offset + window.innerHeight).toFixed();
+
+//         window.scroll({
+//             top: target.toFixed(),
+//             behavior: 'smooth'
+//         });
+//         is_window_scrolling = true;
+        
+        
+//         window.onscroll = function() {
+//             (console.log(`height = ${window.innerHeight} - offset = ${scroll_offset}`));
+//             let currentScrollOffset = (window.pageYOffset || document.documentElement.scrollTop).toFixed()
+
+//             if(currentScrollOffset.toFixed() === target) {
+//                 console.log("Scrolling stopped");
+//                 is_window_scrolling = false;
+//             }
+//         }
+//     }
+
+//     last_scroll_position = window.scrollY;
+// }

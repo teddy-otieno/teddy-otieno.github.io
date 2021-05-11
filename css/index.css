@@ -15,15 +15,11 @@
   background-color: #797979;
 }
 
-html {
-  scroll-snap-type: y mandatory;
-}
-
 body {
   margin: 0;
   padding: 0;
-  background-image: url("../img/lion.jpg");
-  background-color: #000000ab;
+  background-color: #eeeeee;
+  background-color: #171717;
   background-blend-mode: multiply;
   background-attachment: fixed;
   background-size: cover;
@@ -171,12 +167,13 @@ body .side-intro .hello-message {
   width: 40%;
   position: absolute;
   top: 4rem;
+  padding-top: 32pt;
 }
 body .side-intro .hello-message h1 {
   font-weight: normal;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: "Righteous";
-  margin: 0 0 2rem 0;
+  margin: 0 0 24pt 0;
 }
 body .side-intro .hello-message p {
   width: 60%;
@@ -278,6 +275,10 @@ body .resume .skills .tools ul, body .resume .skills .stacks ul {
 }
 
 @media only screen and (max-width: 600px) {
+  html {
+    scroll-snap-type: y mandatory;
+  }
+
   body .navigation {
     display: none;
   }
