@@ -33,6 +33,7 @@ body {
 body header {
   position: sticky;
   top: 0;
+  height: 10vh;
   width: 100%;
   z-index: 3;
   background-color: #171717;
@@ -105,7 +106,7 @@ body .navigation span img {
   width: 1rem;
 }
 body .page {
-  height: 100vh;
+  height: 90vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -135,7 +136,6 @@ body .page .scroll-down-button img {
   }
 }
 body .side-intro {
-  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
