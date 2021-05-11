@@ -32,7 +32,6 @@ body {
   background-attachment: fixed;
   background-size: cover;
   font-family: 'Work Sans', sans-serif;
-  scroll-snap-type: y mandatory;
   // overflow: hidden;
 
   header {
@@ -135,7 +134,6 @@ body {
     align-items: center;
     padding-top: 10vh;
     box-sizing: border-box;
-    scroll-snap-align: start;
 
     .scroll-down-button {
       position: absolute;
@@ -340,9 +338,6 @@ body {
 
 
 @media only screen and (max-width: 600px) {
-  html {
-    scroll-snap-type: y mandatory;
-  }
   
   body {
 

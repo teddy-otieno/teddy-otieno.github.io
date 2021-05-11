@@ -28,7 +28,6 @@ body {
   background-attachment: fixed;
   background-size: cover;
   font-family: "Work Sans", sans-serif;
-  scroll-snap-type: y mandatory;
 }
 body header {
   position: sticky;
@@ -113,7 +112,6 @@ body .page {
   align-items: center;
   padding-top: 10vh;
   box-sizing: border-box;
-  scroll-snap-align: start;
 }
 body .page .scroll-down-button {
   position: absolute;
@@ -284,10 +282,6 @@ body .resume .skills .tools ul, body .resume .skills .stacks ul {
 }
 
 @media only screen and (max-width: 600px) {
-  html {
-    scroll-snap-type: y mandatory;
-  }
-
   body .navigation {
     display: none;
   }
