@@ -34,7 +34,7 @@ body header {
   top: 0;
   height: 10vh;
   width: 100%;
-  z-index: 3;
+  z-index: 10;
   background-color: #171717;
 }
 body header nav {
@@ -139,6 +139,8 @@ body .side-intro {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 body .side-intro .profile-photo {
   display: flex;
@@ -150,6 +152,7 @@ body .side-intro .profile-photo {
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
+  transition: all 0.4s ease;
 }
 body .side-intro .profile-photo img {
   height: 120pt;
@@ -159,6 +162,9 @@ body .side-intro .profile-photo img {
   object-position: center;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+}
+body .side-intro .profile-photo:hover {
+  transform: scale(1.1);
 }
 body .side-intro .hello-message {
   color: white;
@@ -171,6 +177,7 @@ body .side-intro .hello-message {
   position: absolute;
   top: 4rem;
   padding-top: 32pt;
+  z-index: 3;
 }
 body .side-intro .hello-message h1 {
   font-weight: normal;
@@ -226,6 +233,77 @@ body .side-intro .social-media span img {
   height: 100%;
   width: 100%;
   fill: currentColor;
+}
+body .side-intro .floating-item {
+  height: 64pt;
+  width: 64pt;
+  position: absolute;
+  background-color: #4c4c4c;
+  border-radius: 16pt;
+  opacity: 0.3;
+  z-index: 2;
+  transition: opacity 1s ease;
+}
+body .side-intro .floating-item:hover {
+  opacity: 0.8;
+}
+body .side-intro .giant-circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #797979;
+  opacity: 0.2;
+  z-index: 1;
+  transition: box-shadow 1s ease, opacity 1s ease;
+}
+body .side-intro .giant-circle:hover {
+  opacity: 0.8;
+}
+body .side-intro .it-1 {
+  animation: move-around 10s linear alternate infinite;
+}
+body .side-intro .it-2 {
+  border-radius: 32pt;
+  animation: move-it2 10s linear alternate infinite;
+}
+body .side-intro .it-3 {
+  border-radius: 4pt;
+  animation: move-it3 15s linear alternate infinite;
+}
+body .side-intro .it-4 {
+  border-radius: 4pt;
+  animation: move-it4 15s linear alternate infinite;
+}
+body .side-intro .it-5 {
+  border-radius: 4pt;
+  animation: move-it5 30s ease-in-out infinite;
+}
+body .side-intro .it-6 {
+  border-radius: 4pt;
+  animation: move-it6 20s ease-in-out infinite;
+}
+body .side-intro .forward {
+  bottom: -300pt;
+  right: -500pt;
+  height: 900pt;
+  width: 900pt;
+  background-color: #ffea00;
+  box-shadow: 0 0 20pt #ffea0038;
+  animation: move-circle 30s ease-in-out alternate infinite;
+}
+body .side-intro .forward:hover {
+  box-shadow: 0 0 80pt #ffea00;
+}
+body .side-intro .reverse {
+  top: -200pt;
+  left: -100pt;
+  height: 300pt;
+  width: 300pt;
+  background-color: #eaf4f4;
+  box-shadow: #eaf4f438;
+  animation: move-circle-reverse 30s ease-in-out alternate infinite;
+}
+body .side-intro .reverse:hover {
+  box-shadow: 0 0 30pt #eaf4f4;
 }
 body .following {
   background-color: #171717;

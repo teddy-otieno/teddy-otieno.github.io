@@ -39,7 +39,7 @@ body {
     top: 0;
     height: 10vh;
     width: 100%;
-    z-index: 3;
+    z-index: 10;
     background-color: $background_color;
 
     nav {
@@ -166,6 +166,8 @@ body {
     flex-direction: column;
     justify-content: center;
     position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
 
     .profile-photo {
       display: flex;
@@ -177,6 +179,7 @@ body {
       box-sizing: border-box;
       justify-content: center;
       align-items: center;
+      transition: all .4s ease;
 
       img {
         height: 120pt;
@@ -190,6 +193,10 @@ body {
 
     }
 
+    .profile-photo:hover {
+      transform: scale(1.1);
+    }
+
     .hello-message {
       color: white;
       padding: 0.1rem;
@@ -201,6 +208,7 @@ body {
       position: absolute;
       top: 4rem;
       padding-top: 32pt;
+      z-index: 3;
 
       h1 {
         font-weight: normal;
@@ -269,6 +277,91 @@ body {
       }
     }
 
+
+    .floating-item {
+      height: 64pt;
+      width: 64pt;
+      position: absolute;
+      background-color: #4c4c4c;
+      border-radius: 16pt;
+      opacity: .3;
+      z-index: 2;
+      transition: opacity 1s ease;
+    }
+
+    .floating-item:hover {
+      opacity: .8;
+    }
+
+    .giant-circle {
+      position: absolute;
+      border-radius: 50%;
+      background-color: #797979;
+      opacity: .2;
+      z-index: 1;
+      transition: box-shadow 1s ease, opacity 1s ease;
+    }
+
+    .giant-circle:hover {
+      opacity: .8;
+    }
+
+    .it-1 {
+      animation: move-around 10s linear alternate infinite;
+    }
+
+    .it-2 {
+      border-radius: 32pt;
+      animation: move-it2 10s linear alternate infinite;
+    }
+
+    .it-3 {
+      border-radius: 4pt;
+      animation: move-it3 15s linear alternate infinite;
+    }
+
+    .it-4 {
+      border-radius: 4pt;
+      animation: move-it4 15s linear alternate infinite;
+    }
+
+    .it-5 {
+      border-radius: 4pt;
+      animation: move-it5 30s ease-in-out infinite;
+    }
+
+    .it-6 {
+      border-radius: 4pt;
+      animation: move-it6 20s ease-in-out infinite;
+    }
+
+    .forward {
+      bottom: -300pt;
+      right: -500pt;
+      height: 900pt;
+      width: 900pt;
+      background-color: #ffea00;
+      box-shadow: 0 0 20pt #ffea0038;
+      animation: move-circle 30s ease-in-out alternate infinite;
+    }
+
+    .forward:hover {
+      box-shadow: 0 0 80pt #ffea00;
+    }
+
+    .reverse {
+      top: -200pt;
+      left: -100pt;
+      height: 300pt;
+      width: 300pt;
+      background-color: #eaf4f4;
+      box-shadow: #eaf4f438;
+      animation: move-circle-reverse 30s ease-in-out alternate infinite;
+    }
+
+    .reverse:hover {
+      box-shadow:  0 0 30pt #eaf4f4;
+    }
   }
 
   .following {
