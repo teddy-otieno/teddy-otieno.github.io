@@ -1,0 +1,136 @@
+@keyframes main_rocket_burn {
+  to {
+    height: 40pt;
+    bottom: -44pt;
+  }
+}
+
+@keyframes booster_rocket_burn {
+  to {
+    height: 25pt;
+    bottom: -34pt;
+  }
+}
+
+@keyframes rocket-motion {
+
+  10% {
+    top: 50vh;
+    left: 20pt;
+    transform: rotate(0);
+  }
+
+  15% {
+    top: 40pt;
+    transform: rotate(45deg);
+  }
+
+  18% {
+    transform: rotate(90deg);
+  }
+
+  20% {
+    top: 20pt;
+  }
+
+  45% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    top: 20pt;
+    left: 50vw;
+    transform: rotate(90deg);
+  }
+
+  60% {
+    left: 70vw;
+    transform: rotate(0deg);
+  }
+
+  to {
+    left: 50vw;
+    top: 100vh;
+    transform: rotate(0deg);
+  }
+}
+.rocket {
+  top: 100vh;
+  z-index: 2;
+  left: 20pt;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 10pt 1fr 10pt;
+  opacity: .7;
+  transition: opacity .4s ease;
+  animation: rocket-motion 120s linear infinite;
+
+  .exhaust {
+      background-color: orange;
+      box-shadow: 0 0 4pt orange;
+  }
+
+  .booster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ced4da;
+    height: 40pt;
+    width: 10pt;
+    align-self: flex-end;
+    border-radius: 4pt;
+    position: relative;
+
+    .exhaust {
+      display: block;
+      height: 18pt;
+      width: 8pt;
+      border-radius: 8pt;
+      bottom: -20pt;
+      position: absolute;
+      animation: booster_rocket_burn .98s ease alternate infinite;
+    }
+  }
+
+
+  .base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 20pt;
+    .top {
+      display: block;
+      height: 50pt;
+      width: 32pt;
+      border-radius: 15pt;
+      background-color: #e9ecef;
+      position: relative;
+      top: 20pt;
+    }
+
+    .main-rocket {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100pt;
+      width: 20pt;
+      background-color: white;
+      border-radius: 4pt;
+
+      .exhaust {
+        display: block;
+        align-self: center;
+        height: 30pt;
+        width: 14pt;
+        border-radius: 8pt;
+        bottom: -32pt;
+        position: absolute;
+        animation: main_rocket_burn 1s ease alternate infinite;
+      }
+    }
+  }
+}
+
+.rocket:hover {
+  opacity: 1;
+}
