@@ -133,3 +133,12 @@
     top: 300pt;
   }
 }
+@keyframes move_satelite {
+  50% {
+    top: 20pt;
+  }
+  to {
+    left: 120vw;
+    transform: rotate(180deg);
+  }
+}

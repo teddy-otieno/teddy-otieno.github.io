@@ -24,13 +24,13 @@
     transform: rotate(90deg);
   }
   20% {
-    top: 20pt;
+    top: 0pt;
   }
   45% {
     transform: rotate(90deg);
   }
   50% {
-    top: 20pt;
+    top: 0pt;
     left: 50vw;
     transform: rotate(90deg);
   }
@@ -115,5 +115,81 @@
 }
 
 .rocket:hover {
+  opacity: 1;
+}
+
+.satelite {
+  position: absolute;
+  top: 50vh;
+  left: -400pt;
+  display: grid;
+  grid-template-columns: 160pt 32pt 160pt;
+  column-gap: 4pt;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.3);
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+  animation: move_satelite 60s infinite alternate ease;
+}
+.satelite .body {
+  height: 32pt;
+  width: 32pt;
+  background-color: #ffaa00;
+  border-radius: 4pt;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.satelite .body .dish {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34pt;
+  width: 34pt;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 44pt;
+}
+.satelite .body .dish .receiver {
+  display: block;
+  height: 4pt;
+  width: 4pt;
+  background-color: grey;
+  border-radius: 50%;
+}
+.satelite .body .dish .handle {
+  position: absolute;
+  display: flex;
+  height: 5pt;
+  width: 2pt;
+  background-color: white;
+  bottom: -4pt;
+}
+.satelite .solar-array {
+  background-color: #495057;
+  height: 48pt;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 4pt;
+}
+.satelite .solar-array .handle {
+  display: block;
+  width: 6pt;
+  height: 4pt;
+  background-color: #495057;
+  position: absolute;
+}
+.satelite .solar-array .left {
+  right: -6pt;
+}
+.satelite .solar-array .right {
+  left: -6pt;
+}
+
+.satelite:hover {
   opacity: 1;
 }

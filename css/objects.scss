@@ -13,7 +13,6 @@
 }
 
 @keyframes rocket-motion {
-
   10% {
     top: 50vh;
     left: 20pt;
@@ -30,7 +29,7 @@
   }
 
   20% {
-    top: 20pt;
+    top: 0pt;
   }
 
   45% {
@@ -38,7 +37,7 @@
   }
 
   50% {
-    top: 20pt;
+    top: 0pt;
     left: 50vw;
     transform: rotate(90deg);
   }
@@ -61,13 +60,13 @@
   position: absolute;
   display: grid;
   grid-template-columns: 10pt 1fr 10pt;
-  opacity: .7;
-  transition: opacity .4s ease;
+  opacity: 0.7;
+  transition: opacity 0.4s ease;
   animation: rocket-motion 120s linear infinite;
 
   .exhaust {
-      background-color: orange;
-      box-shadow: 0 0 4pt orange;
+    background-color: orange;
+    box-shadow: 0 0 4pt orange;
   }
 
   .booster {
@@ -88,10 +87,9 @@
       border-radius: 8pt;
       bottom: -20pt;
       position: absolute;
-      animation: booster_rocket_burn .98s ease alternate infinite;
+      animation: booster_rocket_burn 0.98s ease alternate infinite;
     }
   }
-
 
   .base {
     display: flex;
@@ -132,5 +130,89 @@
 }
 
 .rocket:hover {
+  opacity: 1;
+}
+
+.satelite {
+  position: absolute;
+  top: 50vh;
+  left: -400pt;
+  display: grid;
+  grid-template-columns: 160pt 32pt 160pt;
+  column-gap: 4pt;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.3);
+  opacity: .5;
+  transition: opacity .5s ease;
+  animation: move_satelite 60s infinite alternate ease;
+
+  .body {
+    height: 32pt;
+    width: 32pt;
+    background-color: #ffaa00;
+    border-radius: 4pt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .dish {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 34pt;
+      width: 34pt;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 44pt;
+
+      .receiver {
+        display: block;
+        height: 4pt;
+        width: 4pt;
+        background-color: grey;
+        border-radius: 50%;
+      }
+
+      .handle {
+        position: absolute;
+        display: flex;
+        height: 5pt;
+        width: 2pt;
+        background-color: white;
+        bottom: -4pt;
+      }
+    }
+  }
+    .solar-array {
+      background-color: #495057;
+      height: 48pt;
+      position: relative;
+      display: flex;
+      align-items: center;
+      border-radius: 4pt;
+      
+      .handle {
+        display: block;
+        width: 6pt;
+        height: 4pt;
+        background-color: #495057;
+        position: absolute;
+      }
+      .left {
+        right: -6pt;
+      }
+
+      .right {
+        left: -6pt;
+      }
+    }
+
+
+}
+
+.satelite:hover {
   opacity: 1;
 }
