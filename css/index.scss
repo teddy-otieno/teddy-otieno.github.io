@@ -380,17 +380,19 @@ body {
     .projects {
       margin-top: 16pt;
       padding: 0 32pt;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-evenly;
       column-gap: 4pt;
+
       .project {
         flex-direction: column;
         display: flex;
         align-items: center;
 
         img {
-          width: 100%;
-          height: 100%;
+          width: 500pt;
           border-radius: 4pt;
         }
         
@@ -400,6 +402,13 @@ body {
 
         a {
           color: white;
+        }
+      }
+
+      .mobile {
+        img {
+          height: 500pt;
+          width: unset;
         }
       }
     }
@@ -501,7 +510,12 @@ body {
 
 
         .projects {
-    
+          .project {
+            img {
+              width: 80%;
+            }
+          }
+
           display: flex;
           flex-direction: column;
           padding: 0 16pt;

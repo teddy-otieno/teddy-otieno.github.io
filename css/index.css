@@ -318,8 +318,10 @@ body .following .about-description {
 body .following .projects {
   margin-top: 16pt;
   padding: 0 32pt;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
   column-gap: 4pt;
 }
 body .following .projects .project {
@@ -328,8 +330,7 @@ body .following .projects .project {
   align-items: center;
 }
 body .following .projects .project img {
-  width: 100%;
-  height: 100%;
+  width: 500pt;
   border-radius: 4pt;
 }
 body .following .projects .project p {
@@ -337,6 +338,10 @@ body .following .projects .project p {
 }
 body .following .projects .project a {
   color: white;
+}
+body .following .projects .mobile img {
+  height: 500pt;
+  width: unset;
 }
 body .resume {
   color: white;
@@ -406,5 +411,8 @@ body .resume .skills .tools ul, body .resume .skills .stacks ul {
     display: flex;
     flex-direction: column;
     padding: 0 16pt;
+  }
+  body .following .projects .project img {
+    width: 80%;
   }
 }
