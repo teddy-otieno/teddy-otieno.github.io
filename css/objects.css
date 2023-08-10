@@ -1,157 +1,75 @@
-@-webkit-keyframes main_rocket_burn {
-  to {
-    height: 40pt;
-    bottom: -44pt;
-  }
-}
-
 @keyframes main_rocket_burn {
   to {
     height: 40pt;
     bottom: -44pt;
   }
 }
-
-@-webkit-keyframes booster_rocket_burn {
-  to {
-    height: 25pt;
-    bottom: -34pt;
-  }
-}
-
 @keyframes booster_rocket_burn {
   to {
     height: 25pt;
     bottom: -34pt;
   }
 }
-
-@-webkit-keyframes rocket-motion {
-  10% {
-    top: 50vh;
-    left: 20pt;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  15% {
-    top: 40pt;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  18% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  20% {
-    top: 0pt;
-  }
-  45% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  50% {
-    top: 0pt;
-    left: 50vw;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  60% {
-    left: 70vw;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    left: 50vw;
-    top: 100vh;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
 @keyframes rocket-motion {
   10% {
     top: 50vh;
     left: 20pt;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    transform: rotate(0);
   }
   15% {
     top: 40pt;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
   }
   18% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   20% {
     top: 0pt;
   }
   45% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   50% {
     top: 0pt;
     left: 50vw;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   60% {
     left: 70vw;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
     left: 50vw;
     top: 100vh;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
-
 .rocket {
   top: 100vh;
   z-index: 2;
   left: 20pt;
   position: absolute;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 10pt 1fr 10pt;
-      grid-template-columns: 10pt 1fr 10pt;
+  grid-template-columns: 10pt 1fr 10pt;
   opacity: 0.7;
-  -webkit-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
-  -webkit-animation: rocket-motion 120s linear infinite;
-          animation: rocket-motion 120s linear infinite;
+  animation: rocket-motion 120s linear infinite;
 }
-
 .rocket .exhaust {
   background-color: orange;
-  -webkit-box-shadow: 0 0 4pt orange;
-          box-shadow: 0 0 4pt orange;
+  box-shadow: 0 0 4pt orange;
 }
-
 .rocket .booster {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   background-color: #ced4da;
   height: 40pt;
   width: 10pt;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   border-radius: 4pt;
   position: relative;
 }
-
 .rocket .booster .exhaust {
   display: block;
   height: 18pt;
@@ -159,24 +77,14 @@
   border-radius: 8pt;
   bottom: -20pt;
   position: absolute;
-  -webkit-animation: booster_rocket_burn 0.98s ease alternate infinite;
-          animation: booster_rocket_burn 0.98s ease alternate infinite;
+  animation: booster_rocket_burn 0.98s ease alternate infinite;
 }
-
 .rocket .base {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   max-width: 20pt;
 }
-
 .rocket .base .top {
   display: block;
   height: 50pt;
@@ -186,36 +94,24 @@
   position: relative;
   top: 20pt;
 }
-
 .rocket .base .main-rocket {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   height: 100pt;
   width: 20pt;
   background-color: white;
   border-radius: 4pt;
 }
-
 .rocket .base .main-rocket .exhaust {
   display: block;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   height: 30pt;
   width: 14pt;
   border-radius: 8pt;
   bottom: -32pt;
   position: absolute;
-  -webkit-animation: main_rocket_burn 1s ease alternate infinite;
-          animation: main_rocket_burn 1s ease alternate infinite;
+  animation: main_rocket_burn 1s ease alternate infinite;
 }
 
 .rocket:hover {
@@ -226,57 +122,31 @@
   position: absolute;
   top: 50vh;
   left: -400pt;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 160pt 32pt 160pt;
-      grid-template-columns: 160pt 32pt 160pt;
-  -webkit-column-gap: 4pt;
-          column-gap: 4pt;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: scale(0.3);
-          transform: scale(0.3);
-  opacity: .5;
-  -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease;
-  -webkit-animation: move_satelite 60s infinite alternate ease;
-          animation: move_satelite 60s infinite alternate ease;
+  grid-template-columns: 160pt 32pt 160pt;
+  -moz-column-gap: 4pt;
+       column-gap: 4pt;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.3);
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+  animation: move_satelite 60s infinite alternate ease;
 }
-
 .satelite .body {
   height: 32pt;
   width: 32pt;
   background-color: #ffaa00;
   border-radius: 4pt;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
 .satelite .body .dish {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 34pt;
   width: 34pt;
   background-color: white;
@@ -284,7 +154,6 @@
   position: absolute;
   bottom: 44pt;
 }
-
 .satelite .body .dish .receiver {
   display: block;
   height: 4pt;
@@ -292,31 +161,22 @@
   background-color: grey;
   border-radius: 50%;
 }
-
 .satelite .body .dish .handle {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 5pt;
   width: 2pt;
   background-color: white;
   bottom: -4pt;
 }
-
 .satelite .solar-array {
   background-color: #495057;
   height: 48pt;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border-radius: 4pt;
 }
-
 .satelite .solar-array .handle {
   display: block;
   width: 6pt;
@@ -324,16 +184,13 @@
   background-color: #495057;
   position: absolute;
 }
-
 .satelite .solar-array .left {
   right: -6pt;
 }
-
 .satelite .solar-array .right {
   left: -6pt;
 }
 
 .satelite:hover {
   opacity: 1;
-}
-/*# sourceMappingURL=objects.css.map */
+}/*# sourceMappingURL=objects.css.map */

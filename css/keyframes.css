@@ -1,27 +1,3 @@
-@-webkit-keyframes move-around {
-  from {
-    top: 300pt;
-    right: 324pt;
-  }
-  25% {
-    top: 200pt;
-    right: 20pt;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  50% {
-    top: 100pt;
-    right: 124pt;
-    background-color: #7251b5;
-  }
-  to {
-    top: 300pt;
-    right: 324pt;
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
-  }
-}
-
 @keyframes move-around {
   from {
     top: 300pt;
@@ -30,8 +6,7 @@
   25% {
     top: 200pt;
     right: 20pt;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   50% {
     top: 100pt;
@@ -41,35 +16,9 @@
   to {
     top: 300pt;
     right: 324pt;
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
+    transform: rotate(135deg);
   }
 }
-
-@-webkit-keyframes move-it2 {
-  from {
-    top: 300pt;
-    left: 200pt;
-  }
-  25% {
-    top: 200pt;
-    left: 20pt;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  50% {
-    top: 100pt;
-    left: 124pt;
-    background-color: #7bf1a8;
-  }
-  to {
-    top: 300pt;
-    left: 324pt;
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
-  }
-}
-
 @keyframes move-it2 {
   from {
     top: 300pt;
@@ -78,8 +27,7 @@
   25% {
     top: 200pt;
     left: 20pt;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   50% {
     top: 100pt;
@@ -89,35 +37,9 @@
   to {
     top: 300pt;
     left: 324pt;
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
+    transform: rotate(135deg);
   }
 }
-
-@-webkit-keyframes move-it3 {
-  from {
-    bottom: 100pt;
-    left: 324pt;
-  }
-  25% {
-    bottom: 200pt;
-    left: 20pt;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  50% {
-    bottom: 100pt;
-    left: 124pt;
-    background-color: #ff9b85;
-  }
-  to {
-    bottom: 100pt;
-    left: 324pt;
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
-  }
-}
-
 @keyframes move-it3 {
   from {
     bottom: 100pt;
@@ -126,8 +48,7 @@
   25% {
     bottom: 200pt;
     left: 20pt;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   50% {
     bottom: 100pt;
@@ -137,35 +58,9 @@
   to {
     bottom: 100pt;
     left: 324pt;
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
+    transform: rotate(135deg);
   }
 }
-
-@-webkit-keyframes move-it4 {
-  from {
-    bottom: 100pt;
-    left: 324pt;
-  }
-  25% {
-    bottom: 200pt;
-    left: 20pt;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  50% {
-    bottom: 100pt;
-    left: 124pt;
-    background-color: #2b9348;
-  }
-  to {
-    bottom: 100pt;
-    left: 324pt;
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
-  }
-}
-
 @keyframes move-it4 {
   from {
     bottom: 100pt;
@@ -174,8 +69,7 @@
   25% {
     bottom: 200pt;
     left: 20pt;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
   50% {
     bottom: 100pt;
@@ -185,31 +79,9 @@
   to {
     bottom: 100pt;
     left: 324pt;
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
+    transform: rotate(135deg);
   }
 }
-
-@-webkit-keyframes move-it5 {
-  from {
-    top: 100pt;
-    right: 20pt;
-  }
-  25% {
-    top: 200pt;
-    right: 100pt;
-  }
-  50% {
-    top: 400pt;
-    right: 500pt;
-    background-color: #ffd8be;
-  }
-  to {
-    top: 100pt;
-    right: 20pt;
-  }
-}
-
 @keyframes move-it5 {
   from {
     top: 100pt;
@@ -229,27 +101,6 @@
     right: 20pt;
   }
 }
-
-@-webkit-keyframes move-it6 {
-  from {
-    top: 100pt;
-    left: 20pt;
-  }
-  25% {
-    top: 200pt;
-    left: 100pt;
-  }
-  50% {
-    top: 400pt;
-    left: 500pt;
-    background-color: #81c3d7;
-  }
-  to {
-    bottom: 100pt;
-    left: 20pt;
-  }
-}
-
 @keyframes move-it6 {
   from {
     top: 100pt;
@@ -269,28 +120,11 @@
     left: 20pt;
   }
 }
-
-@-webkit-keyframes move-circle {
-  to {
-    bottom: 300pt;
-  }
-}
-
 @keyframes move-circle {
   to {
     bottom: 300pt;
   }
 }
-
-@-webkit-keyframes move-circle-reverse {
-  50% {
-    left: 100pt;
-  }
-  to {
-    top: 300pt;
-  }
-}
-
 @keyframes move-circle-reverse {
   50% {
     left: 100pt;
@@ -299,26 +133,12 @@
     top: 300pt;
   }
 }
-
-@-webkit-keyframes move_satelite {
-  50% {
-    top: 20pt;
-  }
-  to {
-    left: 120vw;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-}
-
 @keyframes move_satelite {
   50% {
     top: 20pt;
   }
   to {
     left: 120vw;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
-}
-/*# sourceMappingURL=keyframes.css.map */
+}/*# sourceMappingURL=keyframes.css.map */
